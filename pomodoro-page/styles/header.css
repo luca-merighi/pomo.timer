@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    grid-area: header;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.header h1 span:first-of-type {
+    color: var(--black);
+}
+
+.header h1 span:last-of-type {
+    color: var(--blue);
+}
+
+.header .menu {
+    width: 1.8rem;
+    height: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .menu:hover {
+    cursor: pointer;
+}
+
+.header .menu:focus {
+    outline: 2px solid var(--red);
+    border-radius: 5px;
+}
+
+.header .menu .menu-icon {
+    width: 70%;
+    height: 70%;
+}
+
+@media(min-width: 1024px) {
+    .header .menu {
+        display: none;
+    }
+}

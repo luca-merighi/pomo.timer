@@ -1,0 +1,29 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    background: 
+        url('../img/bg-top.svg') no-repeat top/contain,
+        url('../img/bg-bottom.svg') no-repeat bottom/contain;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 'form';
+    grid-auto-rows: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-container h1 {
+    text-align: center;
+    color: var(--red);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#login-container h1 span:first-of-type {
+    color: var(--black);
+}
+
+#login-container h1 span:last-of-type {
+    color: var(--blue);
+}

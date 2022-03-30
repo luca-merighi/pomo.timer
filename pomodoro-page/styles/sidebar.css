@@ -1,0 +1,155 @@
+#sidebar {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+#sidebar.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.sidebar-container {
+    background-color: var(--white);
+    padding: 1rem 0 0 0;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    box-shadow: -200px 0px 100px #2d343650;
+}
+
+.close {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.close:focus {
+    outline: 2px solid var(--red);
+}
+
+.close-icon {
+    width: 95%;
+    height: 95%;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-image {
+    border-radius: 999px;
+    width: 10rem;
+    border: 5px solid var(--blue);
+}
+
+#profile-name {
+    color: var(--black);
+}
+
+.profile-container p {
+    color: var(--red);
+    font-weight: 500;
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container p span:first-of-type {
+    color: var(--black);
+}
+
+.profile-container p span:last-of-type {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.log-out {
+    background-color: var(--bg-form);
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.log-out .icon {
+    background-color: #cad0d0;
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.log-out .icon:hover {
+    cursor: pointer;
+}
+
+.log-out .icon:focus {
+    border: 2px solid var(--black);
+    outline: none;
+}
+
+@media(min-width: 1024px) {
+    #sidebar {
+        grid-area: profile;
+        position: relative;
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sidebar.hide {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .sidebar-container {
+        background-color: var(--bg-form);
+        box-shadow: none;
+        height: 100%;
+        width: 15rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .profile-container {
+        height: 100%;
+    }
+
+    .log-out {
+        display: none;
+    }
+}

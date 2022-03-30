@@ -1,0 +1,82 @@
+.github-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.github-login-form.hide {
+    display: none;
+}
+
+.github-login-form .back { 
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.github-login-form .back:hover {
+    cursor: pointer;
+}
+
+.github-login-form .back:focus {
+    outline: 2px solid var(--red);
+}
+
+.github-login-form .back-icon {
+    width: 1rem;
+    height: 1rem; 
+}
+
+
+.github-login-form .name-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.github-login-form .name-input label {
+    font-weight: 500;
+    width: 70%;
+    color: var(--black);
+}
+
+.github-login-form .name-input input {
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    padding: 8px 5px;
+    background-color: var(--white);
+    font: 400 0.875rem 'Poppins', sans-serif;
+    color: var(--black);
+    width: 70%;
+}
+
+.github-login-form .name-input input:focus {
+    border: 2px solid var(--blue);
+    outline: none;
+}
+
+.gh-login-button {
+    background-color: var(--blue);
+    padding: 0.875rem;
+    border: none;
+    border-radius: 5px;
+    font: 500 0.875rem 'Poppins', sans-serif;
+    color: var(--white);
+}
+
+.gh-login-button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.gh-login-button:focus {
+    outline: 2px solid var(--black);
+}

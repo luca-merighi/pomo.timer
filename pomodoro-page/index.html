@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luca Merighi">
+    <meta name="description" content="Estude durante vinte e cinco minutos com mais foco utilizando a técnica pomodoro">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/countdown-container.css">
+    <link rel="stylesheet" href="./styles/countdown-buttons.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="../animations.css">
+
+    <link rel="shortcut icon" href="./public/clock.png" type="image/x-icon">
+    <title>pomo.timer</title>
+</head>
+<body>
+    <header class="header animation-down">
+        <h1 lang="en-us">
+            pomo<span>.</span><span>timer</span>
+        </h1>
+
+        <div tabindex="0" class="menu">
+            <img 
+            src="./img/menu.svg" 
+            alt="Ícone Menu de abrir a Sidebar" 
+            class="menu-icon">
+        </div>
+    </header>
+    <main id="countdown-container" class="animation-left">
+        <h3 lang="en-us">Time to Focus</h3>
+
+        <div class="countdown">
+            <span class="minutes">30</span>
+            <span class="colon">:</span>
+            <span class="seconds">00</span>
+        </div>
+    
+        <div class="button-container">
+            <button 
+            onclick="Timer.init()"
+            type="button"
+            class="start-button">
+                Iniciar
+            </button>
+
+            <button 
+            onclick="Timer.pause()"
+            type="button"
+            class="pause-button hide">
+                Pausar
+            </button>
+
+            <button 
+            onclick="Timer.resume()"
+            type="button"
+            class="resume-button hide">
+                Retomar
+            </button>
+
+            <button 
+            onclick="Timer.restart()"
+            type="button"
+            class="restart-button hide">
+                Reiniciar
+            </button>
+        </div>
+    </main>
+
+    <div id="sidebar" class="hide">
+        <div class="sidebar-container">
+            <div tabindex="0" class="close">
+                <img 
+                src="./img/close.svg" 
+                alt="Ícone de fechar mensagem em forma de x"
+                class="close-icon">
+            </div>
+            <div class="profile-container">
+                <img 
+                src="" 
+                alt="Profile Image" 
+                id="profile-image">
+
+                <h3 id="profile-name">
+
+                </h3>
+
+                <p>
+                    Pomodoros
+                    <span>concluídos:</span>
+                    <span id="pomodoro">0</span>
+                </p>
+            </div>
+
+            <div class="log-out">
+                <div tabindex="0" class="icon">
+                    <img 
+                    src="./img/log-out.svg" 
+                    alt="Ícone de terminar sessão, deslogar" 
+                    class="logout-icon">
+                </div>
+                <span>Fazer Logout</span>
+            </div>
+        </div>
+    </div>
+
+    <div tabindex="0" class="icon">
+        <img 
+        src="./img/log-out.svg" 
+        alt="Ícone de terminar sessão, deslogar" 
+        class="logout-icon">
+        <span>Fazer Logout</span>
+    </div>
+
+    <div id="level-up-modal" class="hide">
+        <div class="modal-container">
+            <img 
+            tabindex="0"
+            src="./img/close.svg"
+            alt="Ícone de fechar mensagem em forma de x"
+            class="close-modal">
+            <span id="pomodoro">0</span> 
+            <div class="modal-text">
+                <h3>Parabéns!</h3>
+                <p>Você alcançou um novo nível.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/sidebar.js"></script>
+    <script src="./scripts/loadData.js"></script>
+    <script src="./scripts/countdown.js"></script>
+    <script src="./scripts/modal.js"></script>
+</body>
+</html>
