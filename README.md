@@ -15,4 +15,4 @@ Esse aplicativo possuí semântica, estilização com cores agradáveis aos olho
 </div>
 <br/>
 
-### [Link para a Páinga](https://pomo-timer-vercel.vercel.app/index.html "pomo.timer")
+### [Link para a Página](https://pomo-timer-vercel.vercel.app/index.html "pomo.timer")
